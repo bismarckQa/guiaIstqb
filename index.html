@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia ISTQB
+  </title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="contenedor">
+   <div class="nav-left">
+    <div class="logo-content">
+     <img src="img/Istqb.png" alt="logo" class="logo"> 
+   </div>
+   <div class="temario">
+     <p>Temario ISTQB</p>
+   </div>
+   <div class="dropdown botonera">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Introducción
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" onclick="introduccion()" >Introducción ISTQB</a></li>
+    </ul>
+  </div>
+  <div class="dropdown botonera">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+     Objetivos
+   </button>
+   <ul class="dropdown-menu">
+    <li><a class="dropdown-item" onclick="objetivosPruebas()" >Objetivos de las pruebas</a></li>
+    <li><a class="dropdown-item" onclick="probarDepurar()" >Probar y Depurar</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Principios Pruebas
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="principiosPruebas()">Principios de las pruebas</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Plan de Pruebas
+ </button>
+ <ul class="dropdown-menu" >   
+  <li><a class="dropdown-item" onclick= "planPruebas()">Estructura Plan de Pruebas</a></li>
+</ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Glosario
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="glosario()">Glosario ISTQB</a></li> 
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Habilidades en Testing
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="HabilidadesTesting()"> Habilidades y buenas prácticas en Testing</a></li>
+    
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Modelo de Ciclos
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="modeloCicloVida()"> Modelos ciclo de vida</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Niveles de Pruebas
+ </button>
+ <ul class="dropdown-menu" >
+  <li><a class="dropdown-item" onclick="componentes()"> Componentes</a></li>
+  <li><a class="dropdown-item" onclick="integracionComponentes()"> Integración de componentes</a></li>
+  <li><a class="dropdown-item" onclick="sistemas()"> Sistema</a></li>
+  <li><a class="dropdown-item" onclick="aceptacion()"> Aceptación</a></li>
+  <li><a class="dropdown-item" onclick="intgracionSistemas()"> Integración de sistemas</a></li>
+</ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Tipos de Pruebas
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="pruebasFuncionales()"> Pruebas Funcionales</a></li>
+    <li><a class="dropdown-item" onclick="pruebasNoFuncionales()"> Pruebas No Funcionales</a></li>
+    <li><a class="dropdown-item" onclick="pruebasCajaBlanca()"> Pruebas De caja Blanca</a></li>
+    <li><a class="dropdown-item" onclick="pruebasOsociadaCambio()"> Pruebas Asociadas al Cambio</a></li>
+    <li><a class="dropdown-item" onclick="pruebasMantenimiento()"> Pruebas de Mantenimiento</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    FlowField
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="flowfield()"> Crear FlowField</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Colecciones
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="arrayMetodo()"> Arrays</a></li>
+    <li><a class="dropdown-item" onclick="listas()"> List</a></li>
+    <li><a class="dropdown-item" onclick="diccionary()"> Diccionary</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Table Extensiones
+ </button>
+ <ul class="dropdown-menu" >
+  <li><a class="dropdown-item" onclick="tableExtend()"> Extensión De Tabla</a></li>
+</ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Reportes
+ </button>
+ <ul class="dropdown-menu" >
+  <li><a class="dropdown-item" onclick="reportes()"> Reports</a></li>
+  <li><a class="dropdown-item" onclick="requestpage()">Requestpage</a></li>
+</ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Eventos AL
+ </button>
+ <ul class="dropdown-menu" >
+  <li><a class="dropdown-item" onclick="tiposEventos()"> Tipos Eventos </a></li>
+  <li><a class="dropdown-item" onclick="eventosSuscriptor()"> Evento Suscriptor</a></li>
+  <li><a class="dropdown-item" onclick="eventosTrigger()"> Triggers Eventos</a></li>
+</ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Traducciones XLIFF
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="traduccionFiles()">Crear Archivos de traducción </a></li>
+  </ul>
+</div>
+<!--Business Central Funcional-->
+<div class="temario">
+ <p>Business Central</p>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Introducción BC
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="introBc()"> Introducción</a></li>
+    <li><a class="dropdown-item" onclick="suscripciones()"> Suscripciones</a></li>
+    <li><a class="dropdown-item" onclick="instalacionBussines()"> Instalación Business Central</a></li>
+    
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Configuración Básica
+  </button>
+  <ul class="dropdown-menu" >
+
+    <li><a class="dropdown-item" onclick="configuracion()"> Configuración Básica</a></li>
+    <li><a class="dropdown-item" onclick="crearEmpresa()"> Crear Empresas</a></li>
+    <li><a class="dropdown-item" onclick="rapidStart()">Paquetes Configuración</a></li>
+    <li><a class="dropdown-item" onclick="serieNumerica()">Serie Númerica</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Contabilidad
+ </button>
+ <ul class="dropdown-menu" >
+  <li><a class="dropdown-item" onclick="ConfigContabGeneral()"> Config Contabilidad General</a></li>
+  <li><a class="dropdown-item" onclick="configPlanCuenta()">  Plan de cuentas</a></li>
+  <li><a class="dropdown-item" onclick="diarioGenerales()"> Diario Generales </a></li>
+  <li class="desplegar"><a class="dropdown-item dropdown-toggle" >Gestión IVA</a>
+    <ul class="submenu">
+     <li><a class="dropdown-item" onclick="gestionIva()">Gestión de Iva</a></li>
+     <li><a class="dropdown-item" onclick="crearModelo340()"> Modelo 340</a></li>
+     <li><a class="dropdown-item" onclick="modeloSii()">Modelo S.I.I</a></li>
+   </ul>
+ </li>
+ <li><a class="dropdown-item" onclick="configEsqueCentas()"> Config Esquemas de Cuentas</a></li>
+ <li><a class="dropdown-item" onclick="configGrupoContables()"> Config Grupos Contables</a></li>
+ <li><a class="dropdown-item" onclick="presupuestos()"> Presupuestos</a></li>
+ <li><a class="dropdown-item" onclick="dimensiones()"> Dimensiones</a></li>
+</ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Activos Fijos
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="crearPeriodoContable()"> Crear Año Fiscal</a></li>
+    <li><a class="dropdown-item" onclick="cerrarPeriodoContable()"> Cerrar Año Fiscal</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Periodos Contables
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="crearPeriodoContable()"> Crear Año Fiscal</a></li>
+    <li><a class="dropdown-item" onclick="cerrarPeriodoContable()"> Cerrar Año Fiscal</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Clientes
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="crearPlantillaCliente()"> Crear Plantilla Cliente</a></li>
+    <li><a class="dropdown-item" onclick="crearCliente()">Crear Cliente</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Ventas
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="resumenVentas()">Resumen Ventas</a></li>
+    <li><a class="dropdown-item" onclick="confiVentas()"> Configuración Ventas</a></li>
+    <li><a class="dropdown-item" onclick="pedidoVentas()"> Crear pedido Ventas</a></li>
+    <li><a class="dropdown-item" onclick="facturaVenta()"> Crear factura Ventas</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Pagos
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="configTerminosPagos()"> Config Terminos Pagos</a></li>
+    <li><a class="dropdown-item" onclick="pagoProveedores()"> Pago Proveedores</a></li>
+    <li><a class="dropdown-item" onclick="pagoCliente()"> Pago Clientes</a></li>
+    <li><a class="dropdown-item" onclick="pagoSepa()"> Pagos Directo Sepa</a></li>
+    <li><a class="dropdown-item" onclick="carterapagos()"> Cartera de Pagos y Cobros</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Almacenes
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="planificacionAlmacen()"> Planificación Almacen</a></li>
+    <li><a class="dropdown-item" onclick="administrarInventario()"> Administrar Inventario</a></li>
+    <li><a class="dropdown-item" onclick="gestionAlmacenes()"> Gestion Almacenes</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Productos
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="crearArticulo()"> Crear Articulo</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Compras
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="compras()">Compras</a></li>
+    <li><a class="dropdown-item" onclick="crearCompra()"> Crear Oferta Compra</a></li>
+    <li><a class="dropdown-item" onclick="facturaCompra()"> Crear Factura Compra</a></li>
+    <li><a class="dropdown-item" onclick="registroCompra()"> Registro Compra</a></li>
+    <li><a class="dropdown-item" onclick="confPrecioCompra()">Conf Precios de Compras</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Proveedores
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="crearProveedor()">Crear Proveedor</a></li>
+    <li><a class="dropdown-item" onclick="agregarBancoPro()">Agregar Banco Proveedor</a></li>
+  </ul>
+</div>
+
+</div><!--Nav lef end-->
+<div class="contenedor-contenido">
+  <h1 class="titulo">Guía Preparación ISTQB</h1>
+  <div class="bodyContent">
+
+    <h2 class="subtitulos">Que es International Software Testing Qualifications Board (ISTQB)? </h2>
+    <div class="img-content2">
+      <img src="img/ISTQB01.png" alt="">
+    </div>  
+    <p class="parrafo"><b>El International Software Testing Qualifications Board (ISTQB)</b> 
+    es una organización sin fines de lucro que se dedica a estandarizar y certificar el conocimiento en el campo de las pruebas de software a nivel internacional. Fundada en 2002, ISTQB establece estándares comunes y ofrece certificaciones para profesionales de pruebas de software en todo el mundo.</p>
+    <p class="parrafo"><b>El principal objetivo de ISTQB</b>  es mejorar la calidad y eficiencia de las pruebas de software al proporcionar un marco de trabajo común y reconocido globalmente. Esto se logra mediante la creación y mantenimiento de un cuerpo de conocimientos común (Syllabus), que define los conceptos, terminología y mejores prácticas en el campo de las pruebas de software.</p>
+    <p class="parrafo">
+      <b>ISTQB ofrece varias certificaciones en diferentes niveles </b> desde el nivel básico hasta el nivel avanzado y el nivel de experto, cubriendo una amplia gama de temas relacionados con las pruebas de software. Estas certificaciones son ampliamente reconocidas y valoradas por la industria, lo que ayuda a los profesionales a mejorar sus habilidades, avanzar en sus carreras y demostrar su experiencia en el campo de las pruebas de software.
+    </p>
+    <h3>La Importancia de la certificación de (ISTQB) y funcionalidades: </h3>
+    <div class="contentList">
+      <ul>
+        <li><b>Validación de Conocimientos:</b> Obtener una certificación en pruebas de software valida que un profesional ha adquirido un conjunto de conocimientos y habilidades específicas en el campo de las pruebas de software, según los estándares internacionales establecidos por ISTQB.</li>
+        <li><b>Credibilidad Profesional:</b>  La certificación ISTQB otorga credibilidad a los profesionales de pruebas de software, ya que está respaldada por una organización reconocida a nivel mundial. Esto puede ser especialmente importante al buscar empleo o al demostrar competencia a empleadores o clientes.</li>
+        <li><b>Estándar Global:</b> ISTQB establece un estándar global para la industria de las pruebas de software, lo que significa que las certificaciones son reconocidas y valoradas en todo el mundo. Esto facilita la movilidad laboral internacional y garantiza una base común de conocimientos en el campo.</li>
+        <li><b>Desarrollo Profesional:</b> Obtener una certificación ISTQB puede ayudar en el desarrollo profesional al proporcionar una estructura para el aprendizaje continuo y el crecimiento en la carrera de pruebas de software. Las certificaciones de nivel avanzado y experto ofrecen oportunidades para especializarse en áreas específicas y avanzar en roles de liderazgo.</li>
+        <li><b>Mejora de la Calidad:</b> Los profesionales certificados por ISTQB están equipados con conocimientos y habilidades que les permiten realizar pruebas de software de manera más efectiva y eficiente. Esto puede ayudar a mejorar la calidad del software al identificar y corregir defectos antes de que lleguen a los usuarios finales.</li>
+      </ul>
+    </div>
+    <p class="parrafo">En resumen, la certificación en pruebas de software, como la ofrecida por ISTQB, es importante porque valida los conocimientos y habilidades de los profesionales, otorga credibilidad, establece un estándar global, promueve el desarrollo profesional y contribuye a mejorar la calidad del software.</p>
+    <hr>
+
+<!--------------------------------
+  Inicio de la Function de prueba
+  -------------------------------->
+  
+    
+  
+
+
+
+
+
+  
+  
+
+
+  
+  
+
+  <p class="parrafo"></p>
+
+<h3>Organigrama de Pruebas de mantenimiento</h3>
+
+
+
+  <!--Fin  la Function-->
+    <!--
+      
+      &lt; y &gt;, 
+      <h2 class="Subtitulos"></h2>  
+      <div class="img-content2"><img src="img/" alt=""></div>
+      <p class="parrafo"></p>
+      <div class="contentList"><ul></ul></div>
+      class="ifra"
+      <pre class="content-code"> <code class="lang-al-language"></code></pre>
+      <span class="rojo"></span>
+      <iframe src="" frameborder="0"></iframe>
+
+       <li class="desplegar"><a class="dropdown-item dropdown-toggle" >Pepes</a>
+        <ul class="submenu">
+          <li><a class="dropdown-item" onclick="">pepetoe</a></li>
+        </ul>
+       </li>
+
+
+       <div class="contentList">
+  <p><b>1. Validacion</b></p>
+  <ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  </ul>
+  </div>
+
+   <div class="content_funciones">
+    </div>
+
+  -->
+</div>
+</div>
+
+</div>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.85);">
+    © <span id="currentYear"></span> Copyright
+    <a class="text-enlace" href="https://www.biscoder.com/">Biscoder.com</a>
+  </div>
+  <!-- Copyright -->
+
+  <!-- JavaScript para imprimir el año actual -->
+  <script>
+    document.getElementById("currentYear").innerText = new Date().getFullYear();
+  </script>
+</footer>
+
+<script type="text/javascript" src="js/temario.js"></script>
+<script type="text/javascript" src="js/bcFuncional.js"></script>
+<script type="text/javascript" src="js/sintaxis.js"></script>
+</body>
+</html>
+
+
+
+

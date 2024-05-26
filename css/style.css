@@ -1,0 +1,247 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.contenedor{
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo-content{
+  width: 100%;
+  
+}
+.logo{
+  width: 100%;
+  height: 80px;
+
+}
+
+.nav-left{
+  width: 20%;
+  border-right: 1px solid black;
+
+}
+.temario {
+  width: 100%;
+  border: 1px solid black;
+}
+.temario p{
+
+  width: 100%;
+  padding: 3px 0px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 17pt;
+  background: black;
+  color: white;
+  margin-bottom: 0px;
+}
+.contenedor-contenido{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.titulo{
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 10px;
+  font-size: 40pt;
+  letter-spacing: 4px;
+
+  text-align: center;
+  height: 80px;
+}
+.botonera:first-child{
+  border-top: 1px solid black;
+}
+@media(max-width: 768px){
+  .titulo{
+    width: 100%;
+    background: black;
+    color: white;
+
+    font-size: 20pt;
+
+    text-align: center;
+  }
+
+}
+.botonera button{
+  width:100%;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 1px;
+}
+.botonera button:hover{
+  background: black;
+  color: green;
+}
+.botonera .dropdown-menu{
+  width: 100%;
+  background: black;
+}
+
+.botonera .dropdown-menu li a{
+  color: white;
+  font-size: 16px;
+
+}
+.botonera .dropdown-menu li a:hover{
+  background: green;
+  cursor: pointer;
+}
+.submenu{
+  display: none;
+  
+}
+.desplegar:hover > .submenu{
+  display: block;
+
+}
+.bodyContent{
+  width: 100%;
+  padding: 0px ;
+  background: white;
+  display: flex;
+  justify-content: ;
+  justify-items:start;
+  flex-wrap: wrap;
+  background-color: #CACBCA;
+}
+.content_funciones{
+  padding: 0px 10px;
+  background-color: #CACBCA;
+  margin-top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.subtitulos{
+  width: 100%;
+  font-size: 20pt;
+
+}
+.parrafo{
+  text-align: justify;
+  padding: 0px 10px;
+}
+.img-content{
+  width: 100%;
+  padding: 5px;
+  
+}
+.img-content2{
+  width: 100%;
+  height: 600px;display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.img-content img{
+  width: 100%;
+  height: 400px;
+  max-width: 1400px;
+  object-fit:contain;
+}
+.img-content2 img{
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  object-fit:contain;
+  object-position: 0px 0px;
+  margin-bottom: 0px;
+}
+.contentList{
+  width: 100%;
+}
+.contentList ul li{
+  list-style: square;
+}
+.tabla1{
+  background: black;
+  width: 100%;
+  border: 1p solid black;
+  color:  white;
+  border-collapse: separate;
+}
+.tabla1 th {
+  border: 1px solid white;
+  padding: 2px 5px;
+
+  letter-spacing: 2px;
+}
+
+.tabla1 td {
+  border: 1px solid white;
+  padding: 2px 5px;
+}
+/*Estilos Iframe*/
+
+.ifra{
+  width: 100%;
+  height: 550px;
+  box-shadow:
+  inset 0 -3em 3em rgba(0,0,0,0.1),
+  0 0  0 2px rgb(255,255,255),
+  0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.ifraWeb{
+  width: 100%;
+  height: 600px;
+  box-shadow:
+  inset 0 -3em 3em rgba(0,0,0,0.1),
+  0 0  0 2px rgb(255,255,255),
+  0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.content-code{
+  width: 80%;
+  margin: auto;
+  background: black;
+  border: 3px solid silver;
+  overflow-y: scroll;
+
+  max-height: 400px;
+}
+.lang-al-language{
+  width: 100%;
+  color: white;
+}
+.borders{
+  border: 1px solid black;
+}
+.rojo{
+  color: red;
+}
+.verde{
+  color: green;
+}
+.nota-importante{
+background: rgba(5, 252, 229, 1.0);
+border-radius: 10px;
+}
+.nota-solo{
+border-radius: 10px;
+  background: #F56662;
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  font-size: 17pt;
+  word-spacing: 3px;
+}
+
+footer a.text-enlace {
+  color: white;
+  text-decoration: none;
+
+
+}
+
